@@ -4,8 +4,15 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    for i in range(len(arr)):
+        twice_flag = False
+        for j in range(len(arr)):
+            if i != j and arr[i] == arr[j]:
+                twice_flag = True
+        if not twice_flag:
+            return arr[i]
+    return -1
 
-    pass
 
 
 if __name__ == '__main__':
