@@ -4,8 +4,15 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    final_index = []
+    for index, i in enumerate(arr):
+        new_list = arr[:index] + arr[index + 1:]
+        result = 1
+        for x in new_list:
+            result = result * x
+        final_index.append(result)
+    return final_index
 
-    pass
 
 
 if __name__ == '__main__':
